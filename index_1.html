@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Câu 1
+    var arr = [6,7,9,5,3,9,10,7,4,8];
+    function findMax(arr) {
+        let max = arr[0];
+        for(let i = 0; i <arr.length;i++){
+            if(max < arr[i]){
+                max = arr[i]
+            }
+        }document.write(max);
+    }
+    findMax(arr);
+</script>
+</body>
+</html>
