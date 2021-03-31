@@ -7,12 +7,13 @@
 <body>
 <script>
     var n = parseInt(prompt("Enter a number"))
+    var flag = true;
     function isFibonacci (n) {
         if (n < 0) {
-            return false;
+            flag = false;
         }
         else if ((n == 0) || (n == 1)) {
-            return true;
+            flag= true;
         }
         else {
             let arr = [0, 1, 1];
@@ -24,12 +25,15 @@
                 arr[i] = total;
             }
             if (arr.indexOf(n) !== -1) {
-                return true;
+                flag= true;
             }
-            else return false;
+            else flag= false;
+        }if(flag){
+            alert("Số này nằm trong dãy Fibonacci")
+        }else{
+            alert("Số này KHÔNG nằm trong dãy Fibonacci")
         }
-    }console.log(isFibonacci(n));
-
+    }
     isFibonacci(n);
 </script>
 </body>
